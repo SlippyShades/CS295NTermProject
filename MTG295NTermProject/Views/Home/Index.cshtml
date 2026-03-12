@@ -1,0 +1,154 @@
+﻿@model List<CardModel>
+@{
+    ViewData["Title"] = "card Catalog";
+}
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <form asp-controller="Home" asp-action="Filter" method="get">
+            <div>
+                <label for="cardname">Search by Name:</label>
+                <input type="text" id="cardname" name="cardname" value="@ViewData["CardnameFilter"]" />
+            
+                <label for="manacost">Search by Mana Cost:</label>
+                <input type="text" id="manacost" name="manacost" value="@ViewData["ManacostFilter"]" />
+            </div>
+            <div>
+                <label for="cardtype">Search by Card Type:</label>
+                <input type="text" id="cardtype" name="cardtype" value="@ViewData["CardtypeFilter"]" />
+
+                <label for="cardtypetwo">Search by Second Card Type:</label>
+                <input type="text" id="cardtypetwo" name="cardtypetwo" value="@ViewData["CardtypeTwoFilter"]" />
+           
+                <label for="cardtypethree">Search by Third Card Type:</label>
+                <input type="text" id="cardtypethree" name="cardtypethree" value="@ViewData["CardtypeThreeFilter"]" />
+
+                <label for="cardcolor">Search by Card Color:</label>
+                <input type="text" id="cardcolor" name="cardcolor" value="@ViewData["CardcolorFilter"]" />
+            </div>
+            <div>
+                <label for="cardcolor2">Search by Second Card Color:</label>
+                <input type="text" id="cardcolor2" name="cardcolor2" value="@ViewData["Cardcolor2Filter"]" />
+           
+                <label for="cardcolor3">Search by Third Card Color:</label>
+                <input type="text" id="cardcolor3" name="cardcolor3" value="@ViewData["Cardcolor3Filter"]" />
+            
+                <label for="cardcolor4">Search by Fourth Card Color:</label>
+                <input type="text" id="cardcolor4" name="cardcolor4" value="@ViewData["Cardcolor4Filter"]" />
+            
+                <label for="cardcolor5">Search by Fifth Card Color:</label>
+                <input type="text" id="cardcolor5" name="cardcolor5" value="@ViewData["Cardcolor5Filter"]" />
+            
+                <label for="excludecolor">Remove Card Color:</label>
+                <input type="text" id="excludecolor" name="excludecolor" value="@ViewData["excludecolorFilter"]" />
+            </div>
+            <div>
+                <label for="excludecolor2">Remove Second Card Color:</label>
+                <input type="text" id="excludecolor2" name="excludecolor2" value="@ViewData["excludecolor2Filter"]" />
+
+                <label for="excludecolor3">Remove Third Card Color:</label>
+                <input type="text" id="excludecolor3" name="excludecolor3" value="@ViewData["excludecolor3Filter"]" />
+
+                <label for="excludecolor4">Remove Fourth Card Color:</label>
+                <input type="text" id="excludecolor4" name="excludecolor4" value="@ViewData["excludecolor4Filter"]" />
+
+                <label for="excludecolor5">Remove Fifth Card Color:</label>
+                <input type="text" id="excludecolor5" name="excludecolor5" value="@ViewData["excludecolor5Filter"]" />
+
+                <label for="legendary">Search by Legendary:</label>
+                <input type="text" id="legendary" name="legendary" value="@ViewData["LegendaryFilter"]" />
+            
+                <label for="kindred">Search by Kindred:</label>
+                <input type="text" id="kindred" name="kindred" value="@ViewData["KindredFilter"]" />
+            </div>
+            <div>
+                <label for="creatureType">Search by Creature Type:</label>
+                <input type="text" id="creatureType" name="creatureType" value="@ViewData["CreatureTypeFilter"]" />
+
+                <label for="creatureType2">Search by Creature Type Two:</label>
+                <input type="text" id="creatureType2" name="creatureType2" value="@ViewData["CreatureType2Filter"]" />
+
+                <label for="creatureType3">Search by Creature Type Three:</label>
+                <input type="text" id="creatureType3" name="creatureType3" value="@ViewData["CreatureType3Filter"]" />
+
+                <label for="creatureType4">Search by Creature Type Four:</label>
+                <input type="text" id="creatureType4" name="creatureType4" value="@ViewData["CreatureType4Filter"]" />
+            
+                <label for="tough">Search by Toughness:</label>
+                <input type="text" id="tough" name="tough" value="@ViewData["ToughFilter"]" />
+            
+                <label for="power">Search by Power:</label>
+                <input type="text" id="power" name="power" value="@ViewData["PowerFilter"]" />
+            </div>
+            <div>
+                <label for="quantity">Search by Quantity:</label>
+                <input type="text" id="quantity" name="quantity" value="@ViewData["QuantityFilter"]" />
+            </div>
+
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+@if (@Model.Count == 0)
+{
+    <p class="text-center">No cards yet.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thread>
+            <tr>
+                <th>Card Name</th>
+                <th>Mana Cost</th>
+                <th>Card Type</th>
+                <th>Card Type 2</th>
+                <th>Card Type 3</th>
+                <th>Card Color</th>
+                <th>Card Color 2</th>
+                <th>Card Color 3</th>
+                <th>Card Color 4</th>
+                <th>Card Color 5</th>
+                <th>Oracle Text</th>
+                <th>Legendary</th>
+                <th>Kindred</th>
+                <th>Creature Type</th>
+                <th>Creature Type 2</th>
+                <th>Creature Type 3</th>
+                <th>Creature Type 4</th>
+                <th>Toughness</th>
+                <th>Power</th>
+                <th>Quantity</th>
+
+            </tr>
+        </thread>
+        <tbody>
+            @foreach (var card in Model)
+            {
+                <tr>
+                    @* had chatgpt convert my previous ones to the new model *@
+                    <td>@card.CardName</td>
+                    <td>@card.ManaCost</td>
+                    <td>@card.CardType</td>
+                    <td>@card.CardType2</td>
+                    <td>@card.CardType3</td>
+                    <td>@card.CardColor</td>
+                    <td>@card.CardColor2</td>
+                    <td>@card.CardColor3</td>
+                    <td>@card.CardColor4</td>
+                    <td>@card.CardColor5</td>
+                    <td>@card.OracleText</td>
+                    <td>@card.Legendary</td>
+                    <td>@card.Kindred</td>
+                    <td>@card.CreatureType</td>
+                    <td>@card.CreatureType2</td>
+                    <td>@card.CreatureType3</td>
+                    <td>@card.CreatureType4</td>
+                    <td>@card.Power</td>
+                    <td>@card.Toughness</td>
+                    <td>@card.Quantity</td>
+                </tr>
+            }
+
+
+    </table>
+
+}

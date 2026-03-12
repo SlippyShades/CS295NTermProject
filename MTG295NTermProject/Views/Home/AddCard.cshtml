@@ -1,0 +1,112 @@
+﻿@model CardModel
+@{
+    ViewData["Title"] = "Submit Card";
+}
+<form asp-action="AddCard" method="post">
+	<div asp-validation-summary="All"></div>
+
+	<div>
+		<label asp-for="CardName">Card Name:</label>
+		<input asp-for="CardName" />
+	</div>
+
+	<div>
+		<label asp-for="ManaCost">Mana Cost:</label>
+		<input asp-for="ManaCost" />
+	</div>
+
+	<div>
+		<label asp-for="CardType">Card Type:</label>
+		<input asp-for="CardType" />
+	</div>
+
+	<div>
+		<label asp-for="CardType2">Card Type 2:</label>
+		<input asp-for="CardType2" />
+	</div>
+
+	<div>
+		<label asp-for="CardType3">Card Type 3:</label>
+		<input asp-for="CardType3" />
+	</div>
+
+	<div>
+		<label asp-for="CardColor">Card Color:</label>
+		<input asp-for="CardColor" />
+	</div>
+
+	<div>
+		<label asp-for="CardColor2">Card Color 2:</label>
+		<input asp-for="CardColor2" />
+	</div>
+
+	<div>
+		<label asp-for="CardColor3">Card Color 3:</label>
+		<input asp-for="CardColor3" />
+	</div>
+
+	<div>
+		<label asp-for="CardColor4">Card Color 4:</label>
+		<input asp-for="CardColor4" />
+	</div>
+
+	<div>
+		<label asp-for="CardColor5">Card Color 5:</label>
+		<input asp-for="CardColor5" />
+	</div>
+
+	<div>
+		<label asp-for="OracleText">Oracle Text:</label>
+		<input asp-for="OracleText" />
+	</div>
+
+	<div>
+		<label asp-for="Legendary">Legendary:</label>
+		<input asp-for="Legendary" />
+	</div>
+
+	<div>
+		<label asp-for="Kindred">Kindred:</label>
+		<input asp-for="Kindred" />
+	</div>
+
+	<div>
+		<label asp-for="CreatureType">Creature Type:</label>
+		<input asp-for="CreatureType" />
+	</div>
+
+	<div>
+		<label asp-for="CreatureType2">Creature Type 2:</label>
+		<input asp-for="CreatureType2" />
+	</div>
+
+	<div>
+		<label asp-for="CreatureType3">Creature Type 3:</label>
+		<input asp-for="CreatureType3" />
+	</div>
+
+	<div>
+		<label asp-for="CreatureType4">Creature Type 4:</label>
+		<input asp-for="CreatureType4" />
+	</div>
+
+	<div>
+		<label asp-for="Power">Power:</label>
+		<input asp-for="Power" />
+	</div>
+
+	<div>
+		<label asp-for="Toughness">Toughness:</label>
+		<input asp-for="Toughness" />
+	</div>
+
+	<div>
+		<label asp-for="Quantity">Quantity:</label>
+		<input asp-for="Quantity" />
+	</div>
+
+	<button type="submit">Create</button>
+	<a asp-action="Index">Clear</a>
+</form>
+
+}
