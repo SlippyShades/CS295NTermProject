@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MTG295NTermProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260227225334_Initial")]
-    partial class Initial
+    [Migration("20260313042146_New3")]
+    partial class New3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,8 +32,19 @@ namespace MTG295NTermProject.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CardModelId"));
 
-                    b.Property<string>("CardColor")
-                        .IsRequired()
+                    b.Property<int>("CardColor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CardColor2")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CardColor3")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CardColor4")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CardColor5")
                         .HasColumnType("longtext");
 
                     b.Property<string>("CardName")
@@ -41,11 +52,28 @@ namespace MTG295NTermProject.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<string>("CardType")
-                        .IsRequired()
+                    b.Property<int>("CardType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CardType2")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CardType3")
                         .HasColumnType("longtext");
 
                     b.Property<string>("CreatureType")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CreatureType2")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CreatureType3")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CreatureType4")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("longtext");
 
                     b.Property<string>("Kindred")
@@ -63,6 +91,9 @@ namespace MTG295NTermProject.Migrations
 
                     b.Property<string>("Power")
                         .HasColumnType("longtext");
+
+                    b.Property<double?>("PriceUSD")
+                        .HasColumnType("double");
 
                     b.Property<int?>("Quantity")
                         .HasColumnType("int");

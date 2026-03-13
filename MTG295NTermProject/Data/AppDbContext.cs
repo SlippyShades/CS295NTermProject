@@ -10,6 +10,7 @@ namespace MTG295NTermProject.Data
            DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<CardModel> Cards { get; set; }
+        public DbSet<WantedCardModel> WantedCards { get; set; }
 
     }
 }

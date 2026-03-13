@@ -19,45 +19,61 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = MTG295NTermProject
 build_property.RootNamespace = MTG295NTermProject
-build_property.ProjectDir = C:\Users\Jordan\Desktop\Winter 2026\CS 294N\Stupid ass tutorial\MTG295NTermProject\MTG295NTermProject\
+build_property.ProjectDir = C:\Users\Jordan\Desktop\Winter 2026\CS 294N\TermProject\CS295NTermProject\MTG295NTermProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Jordan\Desktop\Winter 2026\CS 294N\Stupid ass tutorial\MTG295NTermProject\MTG295NTermProject
+build_property.MSBuildProjectDirectory = C:\Users\Jordan\Desktop\Winter 2026\CS 294N\TermProject\CS295NTermProject\MTG295NTermProject
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/Stupid ass tutorial/MTG295NTermProject/MTG295NTermProject/Views/Home/AddCard.cshtml]
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Home/AddCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRDYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/Stupid ass tutorial/MTG295NTermProject/MTG295NTermProject/Views/Home/Index.cshtml]
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Home/AddtoWanted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGR0b1dhbnRlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/Stupid ass tutorial/MTG295NTermProject/MTG295NTermProject/Views/Home/Privacy.cshtml]
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Home/PriceCards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmljZUNhcmRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/Stupid ass tutorial/MTG295NTermProject/MTG295NTermProject/Views/Shared/Error.cshtml]
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Home/WantedCards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXYW50ZWRDYXJkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Quiz/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/Stupid ass tutorial/MTG295NTermProject/MTG295NTermProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/Stupid ass tutorial/MTG295NTermProject/MTG295NTermProject/Views/_ViewImports.cshtml]
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/Stupid ass tutorial/MTG295NTermProject/MTG295NTermProject/Views/_ViewStart.cshtml]
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/Stupid ass tutorial/MTG295NTermProject/MTG295NTermProject/Views/Shared/_Layout.cshtml]
+[C:/Users/Jordan/Desktop/Winter 2026/CS 294N/TermProject/CS295NTermProject/MTG295NTermProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-cddlzbwuhx

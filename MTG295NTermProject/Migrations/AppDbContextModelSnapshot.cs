@@ -29,9 +29,8 @@ namespace MTG295NTermProject.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CardModelId"));
 
-                    b.Property<string>("CardColor")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("CardColor")
+                        .HasColumnType("int");
 
                     b.Property<string>("CardColor2")
                         .HasColumnType("longtext");
@@ -50,9 +49,8 @@ namespace MTG295NTermProject.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<string>("CardType")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("CardType")
+                        .HasColumnType("int");
 
                     b.Property<string>("CardType2")
                         .HasColumnType("longtext");
@@ -72,6 +70,9 @@ namespace MTG295NTermProject.Migrations
                     b.Property<string>("CreatureType4")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Kindred")
                         .HasColumnType("longtext");
 
@@ -88,6 +89,9 @@ namespace MTG295NTermProject.Migrations
                     b.Property<string>("Power")
                         .HasColumnType("longtext");
 
+                    b.Property<double?>("PriceUSD")
+                        .HasColumnType("double");
+
                     b.Property<int?>("Quantity")
                         .HasColumnType("int");
 
@@ -97,6 +101,17 @@ namespace MTG295NTermProject.Migrations
                     b.HasKey("CardModelId");
 
                     b.ToTable("Cards");
+                });
+
+            modelBuilder.Entity("MTG295NTermProject.Models.WantedCardModel", b =>
+                {
+                    b.Property<string>("CardName")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("CardName");
+
+                    b.ToTable("WantedCards");
                 });
 #pragma warning restore 612, 618
         }

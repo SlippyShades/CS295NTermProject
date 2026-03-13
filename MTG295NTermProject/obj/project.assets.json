@@ -2888,11 +2888,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jordan\\Desktop\\Winter 2026\\CS 294N\\Stupid ass tutorial\\MTG295NTermProject\\MTG295NTermProject\\MTG295NTermProject.csproj",
+      "projectUniqueName": "C:\\Users\\Jordan\\Desktop\\Winter 2026\\CS 294N\\TermProject\\CS295NTermProject\\MTG295NTermProject\\MTG295NTermProject.csproj",
       "projectName": "MTG295NTermProject",
-      "projectPath": "C:\\Users\\Jordan\\Desktop\\Winter 2026\\CS 294N\\Stupid ass tutorial\\MTG295NTermProject\\MTG295NTermProject\\MTG295NTermProject.csproj",
+      "projectPath": "C:\\Users\\Jordan\\Desktop\\Winter 2026\\CS 294N\\TermProject\\CS295NTermProject\\MTG295NTermProject\\MTG295NTermProject.csproj",
       "packagesPath": "C:\\Users\\Jordan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jordan\\Desktop\\Winter 2026\\CS 294N\\Stupid ass tutorial\\MTG295NTermProject\\MTG295NTermProject\\obj\\",
+      "outputPath": "C:\\Users\\Jordan\\Desktop\\Winter 2026\\CS 294N\\TermProject\\CS295NTermProject\\MTG295NTermProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2926,7 +2926,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -2986,7 +2986,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

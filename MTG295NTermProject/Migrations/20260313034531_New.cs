@@ -5,7 +5,7 @@
 namespace MTG295NTermProject.Migrations
 {
     /// <inheritdoc />
-    public partial class test : Migration
+    public partial class New : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

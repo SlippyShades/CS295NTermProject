@@ -1,0 +1,19 @@
+﻿@model IEnumerable<MTG295NTermProject.Models.WantedCardModel>
+
+<h2>Wanted Cards</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Card Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CardName</td>
+            </tr>
+        }
+    </tbody>
+</table>

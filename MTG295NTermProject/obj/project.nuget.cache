@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OyTtcMiHoA0=",
+  "dgSpecHash": "73vUkOlZohw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jordan\\Desktop\\Winter 2026\\CS 294N\\Stupid ass tutorial\\MTG295NTermProject\\MTG295NTermProject\\MTG295NTermProject.csproj",
+  "projectFilePath": "C:\\Users\\Jordan\\Desktop\\Winter 2026\\CS 294N\\TermProject\\CS295NTermProject\\MTG295NTermProject\\MTG295NTermProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jordan\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\Jordan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

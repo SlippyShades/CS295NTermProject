@@ -1,0 +1,31 @@
+﻿@model QuizQuestions
+@{
+    ViewData["Title"] = "Quiz";
+}
+
+
+<form asp-action="Index" method="post">
+    @Model.Questions[1]<br />
+    <input name="answer1" value="@Model.UserAnswers[1]" />
+    @((Model.UserAnswers[1] == "") ? "" : Model.Results[1] ? "Correct!" : "Wrong, it's Richard Garfield.")
+    <br />
+    @Model.Questions[2]<br />
+    <input name="answer2" value="@Model.UserAnswers[2]" />
+    @((Model.UserAnswers[2] == "") ? "" : Model.Results[2] ? "Correct!" : "Wrong, it's Blue.")
+    <br />
+    @Model.Questions[3]<br />
+    <input name="answer3" value="@Model.UserAnswers[3]" />
+    @((Model.UserAnswers[3] == "") ? "" : Model.Results[3] ? "Correct!" : "Wrong, it's Green.")
+    <br />
+    @Model.Questions[4]<br />
+    <input name="answer4" value="@Model.UserAnswers[4]" />
+    @((Model.UserAnswers[4] == "") ? "" : Model.Results[4] ? "Correct!" : "Wrong, it's Collosal Dreadmaw")
+    <br />
+    @Model.Questions[5]<br />
+    <input name="answer5" value="@Model.UserAnswers[5]" />
+    @((Model.UserAnswers[5] == "") ? "" : Model.Results[5] ? "Correct!" : "Wrong, it's No.")
+    <br />
+    <input type="submit">
+</form>
+
+

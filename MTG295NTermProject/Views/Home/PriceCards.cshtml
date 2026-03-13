@@ -1,0 +1,18 @@
+﻿@model MTG295NTermProject.Models.PriceResults
+@{
+    ViewData["Title"] = "Price Cards";
+}
+<form asp-action="PriceCards" method="post">
+    <label for="CardName">Card Name:</label>
+    <input type="text" id="CardName" name="CardName" value="@Model.CardName" />
+    <button type="submit">Search</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.CardName))
+{
+    <div>
+        <h3>@Model.CardName</h3>
+        <p>Price: $@Model.PriceUSD</p>
+        <img src="@Model.image" alt="@Model.CardName" width="200" />
+    </div>
+}

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MTG295NTermProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260228003545_TypesAdded")]
-    partial class TypesAdded
+    [Migration("20260313034324_Intial")]
+    partial class Intial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,8 @@ namespace MTG295NTermProject.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CardModelId"));
 
-                    b.Property<string>("CardColor")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("CardColor")
+                        .HasColumnType("int");
 
                     b.Property<string>("CardColor2")
                         .HasColumnType("longtext");
@@ -53,9 +52,8 @@ namespace MTG295NTermProject.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<string>("CardType")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("CardType")
+                        .HasColumnType("int");
 
                     b.Property<string>("CardType2")
                         .HasColumnType("longtext");
