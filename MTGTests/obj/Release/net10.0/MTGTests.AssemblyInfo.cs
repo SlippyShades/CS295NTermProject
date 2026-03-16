@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MTGTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f057861ca4c152fc061c7524362b4a3ddf9b44d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb7bf63659262658f7d5a138393a816b14c50c3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MTGTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MTGTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

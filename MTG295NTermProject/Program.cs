@@ -14,7 +14,7 @@ var connectionString = $"{baseConnectionString}userid={user};password={password}
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    options.UseMySQL(connectionString));
 
 
 var app = builder.Build();
