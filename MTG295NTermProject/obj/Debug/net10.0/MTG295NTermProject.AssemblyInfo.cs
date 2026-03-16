@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MTG295NTermProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01aaf039538bd2fbe25fa4ee0de32045607f1100")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f057861ca4c152fc061c7524362b4a3ddf9b44d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MTG295NTermProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MTG295NTermProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

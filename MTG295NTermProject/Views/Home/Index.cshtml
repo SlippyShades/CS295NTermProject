@@ -125,7 +125,7 @@ else
             {
                 <tr>
                     @* had chatgpt convert my previous ones to the new model *@
-                    <td>@card.CardName</td>
+                    <td><a href="https://scryfall.com/search?q=@Uri.EscapeDataString(card.CardName)">@card.CardName</a></td>
                     <td>@card.ManaCost</td>
                     <td>@card.CardType</td>
                     <td>@card.CardType2</td>

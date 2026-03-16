@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using MTG295NTermProject.Data;
 using MTG295NTermProject.Models;
 
@@ -15,6 +17,54 @@ namespace MTG295NTermProject.Controllers
             context = c;
         }
 
+
+
+
+        [HttpGet]
+        public IActionResult AddToWanted()
+        {
+            
+            var model = context.Cards.Select(c => new SelectListItem
+            {
+                Text = c.CardName
+            }).ToList();
+
+            ViewBag.Cards = model;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddToWanted(WantedCardModel wantedCard)
+        {
+            if (ModelState.IsValid)
+            {
+                var newWanted = new WantedCardModel
+                {
+                    CardName = wantedCard.CardName
+                };
+
+                
+                context.WantedCards.Add(newWanted);
+                context.SaveChanges();
+
+                return RedirectToAction("WantedCards");
+            }
+
+            
+            return View(wantedCard);
+        }
+
+        public IActionResult WantedCards()
+        {
+            var list = context.WantedCards
+                .ToList();
+            return View(list);
+        }
+
+
+
+
+
+
         [HttpPost]
         public IActionResult AddCard(CardModel card)
         {
@@ -27,6 +77,9 @@ namespace MTG295NTermProject.Controllers
             }
             return View(card);
         }
+
+        
+
 
 
         public IActionResult Index()
@@ -65,13 +118,13 @@ namespace MTG295NTermProject.Controllers
             {
                 cards = cards.Where(c =>
                     (!string.IsNullOrEmpty(cardtype) &&
-                        (c.CardType.Contains(cardtype) || c.CardType2.Contains(cardtype) || c.CardType3.Contains(cardtype)))
+                        (c.CardType.ToString().Contains(cardtype) || c.CardType2.Contains(cardtype) || c.CardType3.Contains(cardtype)))
                     ||
                     (!string.IsNullOrEmpty(cardtypetwo) &&
-                        (c.CardType.Contains(cardtypetwo) || c.CardType2.Contains(cardtypetwo) || c.CardType3.Contains(cardtypetwo)))
+                        (c.CardType.ToString().Contains(cardtypetwo) || c.CardType2.Contains(cardtypetwo) || c.CardType3.Contains(cardtypetwo)))
                     ||
                     (!string.IsNullOrEmpty(cardtypethree) &&
-                        (c.CardType.Contains(cardtypethree) || c.CardType2.Contains(cardtypethree) || c.CardType3.Contains(cardtypethree)))
+                        (c.CardType.ToString().Contains(cardtypethree) || c.CardType2.Contains(cardtypethree) || c.CardType3.Contains(cardtypethree)))
                 );
             }
 
@@ -83,7 +136,7 @@ namespace MTG295NTermProject.Controllers
             if (includeColors.Any())
             {
                 cards = cards.Where(c => includeColors.Any(color =>
-                    c.CardColor.Contains(color) ||
+                    c.CardColor.ToString().Contains(color) ||
                     c.CardColor2.Contains(color) ||
                     c.CardColor3.Contains(color) ||
                     c.CardColor4.Contains(color) ||
@@ -99,7 +152,7 @@ namespace MTG295NTermProject.Controllers
             if (excludeColors.Any())
             {
                 cards = cards.Where(c => !excludeColors.Any(color =>
-                    c.CardColor.Contains(color) ||
+                    c.CardColor.ToString().Contains(color) ||
                     c.CardColor2.Contains(color) ||
                     c.CardColor3.Contains(color) ||
                     c.CardColor4.Contains(color) ||

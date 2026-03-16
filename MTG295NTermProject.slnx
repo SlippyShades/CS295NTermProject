@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="MTG295NTermProject/MTG295NTermProject.csproj" />
+  <Project Path="MTGTests/MTGTests.csproj" Id="4de727cb-8a56-48be-868c-6eecce644ebc" />
 </Solution>

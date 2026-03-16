@@ -5,6 +5,8 @@ namespace MTG295NTermProject.Models
     {
         [Key]
         public int CardModelId { get; set; }
+        public double? PriceUSD { get; set; }
+        public string? ImageUrl { get; set; }
 
         [Required(ErrorMessage = "Card Name must be between less than 100 characters.")]
         [StringLength(100, MinimumLength = 1, ErrorMessage = "Card Name must be between less than 100 characters.")]
@@ -12,13 +14,12 @@ namespace MTG295NTermProject.Models
 
         [Required(ErrorMessage = "Converted Mana Cost is required.")]
         public int? ManaCost { get; set; }
-
         [Required(ErrorMessage = "Card Type is required.")]
-        public string? CardType { get; set; }
+        public AllowedTypes.CardType CardType { get; set; }
         public string? CardType2 { get; set; }
         public string? CardType3 { get; set; }
         [Required(ErrorMessage = "Card Color is required.")]
-        public string? CardColor { get; set; }
+        public AllowedColors.CardColor CardColor { get; set; }
 
         public string? CardColor2 { get; set; }
         public string? CardColor3 { get; set; }

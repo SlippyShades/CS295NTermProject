@@ -1,0 +1,20 @@
+﻿@model WantedCardModel
+@{
+    ViewData["Title"] = "Add to Wanted";
+}
+
+<h2>Add Card to Wishlist</h2>
+
+<form asp-action="AddToWanted" method="post">
+	<div asp-validation-summary="All"></div>
+	<div>
+		<label asp-for="CardName">Card Name:</label>
+		<input asp-for="CardName" />
+	</div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+
+
+
