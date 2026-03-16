@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MTG295NTermProject.Data;
+using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
