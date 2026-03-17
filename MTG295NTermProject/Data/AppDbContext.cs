@@ -12,6 +12,11 @@ namespace MTG295NTermProject.Data
         public DbSet<CardModel> Cards { get; set; }
         public DbSet<WantedCardModel> WantedCards { get; set; }
 
+
+
+
+
+
     }
 }
 

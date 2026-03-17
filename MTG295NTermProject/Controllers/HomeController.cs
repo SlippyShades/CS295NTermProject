@@ -129,35 +129,42 @@ namespace MTG295NTermProject.Controllers
             }
 
             // Include Colors
+            //Sets a variable with an array of the active color filters 
             var includeColors = new[] { cardcolor, cardcolor2, cardcolor3, cardcolor4, cardcolor5 }
                 .Where(c => !string.IsNullOrEmpty(c))
                 .ToArray();
 
-            if (includeColors.Any())
+            if (!string.IsNullOrEmpty(cardcolor))
             {
-                cards = cards.Where(c => includeColors.Any(color =>
-                    c.CardColor.ToString().Contains(color) ||
-                    c.CardColor2.Contains(color) ||
-                    c.CardColor3.Contains(color) ||
-                    c.CardColor4.Contains(color) ||
-                    c.CardColor5.Contains(color)
-                ));
+                if (Enum.TryParse<AllowedColors.CardColor>(cardcolor, out var colorEnum))
+                {
+                    cards = cards.Where(c =>
+                        c.CardColor == colorEnum ||
+                        (c.CardColor2 != null && c.CardColor2 == cardcolor) ||
+                        (c.CardColor3 != null && c.CardColor3 == cardcolor) ||
+                        (c.CardColor4 != null && c.CardColor4 == cardcolor) ||
+                        (c.CardColor5 != null && c.CardColor5 == cardcolor)
+                    );
+                }
             }
 
             // Exclude Colors
+            
             var excludeColors = new[] { excludeColor, excludeColor2, excludeColor3, excludeColor4, excludeColor5 }
-                .Where(c => !string.IsNullOrEmpty(c))
-                .ToArray();
+    .Where(c => !string.IsNullOrEmpty(c));
 
-            if (excludeColors.Any())
+            foreach (var color in excludeColors)
             {
-                cards = cards.Where(c => !excludeColors.Any(color =>
-                    c.CardColor.ToString().Contains(color) ||
-                    c.CardColor2.Contains(color) ||
-                    c.CardColor3.Contains(color) ||
-                    c.CardColor4.Contains(color) ||
-                    c.CardColor5.Contains(color)
-                ));
+                if (Enum.TryParse<AllowedColors.CardColor>(color, out var colorEnum))
+                {
+                    cards = cards.Where(c =>
+                        !(c.CardColor == colorEnum ||
+                          (c.CardColor2 != null && c.CardColor2 == color) ||
+                          (c.CardColor3 != null && c.CardColor3 == color) ||
+                          (c.CardColor4 != null && c.CardColor4 == color) ||
+                          (c.CardColor5 != null && c.CardColor5 == color))
+                    );
+                }
             }
 
             // Legendary & Kindred
@@ -169,17 +176,16 @@ namespace MTG295NTermProject.Controllers
 
             // Creature Types
             var creatureFilters = new[] { creatureType, creatureType2, creatureType3, creatureType4 }
-                .Where(c => !string.IsNullOrEmpty(c))
-                .ToArray();
+    .Where(c => !string.IsNullOrEmpty(c));
 
-            if (creatureFilters.Any())
+            foreach (var ct in creatureFilters)
             {
-                cards = cards.Where(c => creatureFilters.Any(ct =>
-                    c.CreatureType.Contains(ct) ||
-                    c.CreatureType2.Contains(ct) ||
-                    c.CreatureType3.Contains(ct) ||
-                    c.CreatureType4.Contains(ct)
-                ));
+                cards = cards.Where(c =>
+                    (c.CreatureType != null && c.CreatureType.Contains(ct)) ||
+                    (c.CreatureType2 != null && c.CreatureType2.Contains(ct)) ||
+                    (c.CreatureType3 != null && c.CreatureType3.Contains(ct)) ||
+                    (c.CreatureType4 != null && c.CreatureType4.Contains(ct))
+                );
             }
 
             // Toughness & Power
